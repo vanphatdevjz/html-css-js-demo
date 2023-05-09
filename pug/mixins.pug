@@ -1,0 +1,29 @@
+mixin tourItem(image,price,title,review,reviewCount,duration,tourPrice)
+  .tour
+        .tour-top
+          img.tour-image(src=image, alt='do your magic')
+          span.tour-price= price 
+        .tour-content
+          h3.tour-title=title 
+          .tour-rating
+            .tour-review
+              .tour-star
+                img(src='./images/star.png', alt='this is star')
+              .tour-review-count
+                span= review 
+                 |  (#{reviewCount} reviews)
+            span.tour-duration Duration: #{duration}
+          a.tour-button(href='https://evondev.com', target='_blank', rel='noopener noreferrer') Tours Price $#{tourPrice}
+mixin popularItem()
+  .popular-item 
+    .popular-image 
+      .popular-layout
+      img(src="./images/img1.png").popular-img
+      span.popular-label Must See
+    .popular-content 
+      span.popular-time Sep 28 10:00 AM - 1:00 PM
+      h3.popular-title The Grand Palace
+      .popular-review 
+        img(src="./images/star.png", alt="Ngôi sao")
+        span 4.8 (12 reviews)
+ 
